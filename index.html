@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Completo de Relaxamento e Sono | Mamãe no Comando</title>
+    <title>Guia mestre: Relaxamento e Sono Infantil | Mamãe no Comando</title>
 
     <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <style>
         :root {
             --bg-deep: #070B14;
-            --bg-card: rgba(15, 23, 42, 0.65);
+            --bg-card: rgba(15, 23, 42, 0.7);
             --border-glass: rgba(255, 255, 255, 0.08);
             --primary-gold: #F59E0B;
             --primary-orange: #EA580C;
@@ -41,29 +41,30 @@
             flex-direction: column;
             align-items: center;
             padding: 4rem 1.5rem;
-            background-image: radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.05), transparent 40%),
-                              radial-gradient(circle at 90% 80%, rgba(234, 88, 12, 0.05), transparent 40%);
+            background-image: radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.06), transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(234, 88, 12, 0.06), transparent 40%);
             background-attachment: fixed;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
         }
 
         /* Branding Header */
         .brand-header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .brand-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             background: var(--gradient-brand);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -72,13 +73,13 @@
 
         header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 6rem;
         }
 
         h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 800;
+            font-size: clamp(2.2rem, 7vw, 4rem);
+            font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             background: var(--gradient-gold);
@@ -87,143 +88,199 @@
         }
 
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        /* Introduction Card */
-        .intro-card {
-            background: rgba(245, 158, 11, 0.03);
-            border: 1px solid rgba(245, 158, 11, 0.1);
+        /* Table Card */
+        .table-card {
+            background: rgba(245, 158, 11, 0.05);
+            border: 1px solid rgba(245, 158, 11, 0.2);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-bottom: 4rem;
+        }
+
+        .table-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-gold);
             text-align: center;
         }
 
-        .intro-card p {
-            font-style: italic;
-            color: #CBD5E1;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: var(--text-main);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
 
         /* Sections Grid */
         .guide-section {
             background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border: 1px solid var(--border-glass);
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            border-radius: 28px;
+            padding: 3.5rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .guide-section:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), var(--shadow-glow);
         }
 
         .section-header {
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .icon-box {
-            width: 54px;
-            height: 54px;
-            border-radius: 14px;
-            background: rgba(245, 158, 11, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(245, 158, 11, 0.12);
             color: var(--primary-gold);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             border: 1px solid rgba(245, 158, 11, 0.2);
             flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .guide-section:hover .icon-box {
+            background: var(--gradient-brand);
+            color: #fff;
+            transform: rotate(-5deg);
         }
 
         .section-header h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 800;
         }
 
         .instruction-box {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--primary-gold);
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-gold);
         }
 
         .instruction-title {
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 800;
             color: var(--primary-gold);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .tip-box {
-            background: rgba(245, 158, 11, 0.05);
-            border-radius: 16px;
-            padding: 1.5rem;
-            border: 1px dashed rgba(245, 158, 11, 0.2);
+            background: rgba(245, 158, 11, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px dashed rgba(245, 158, 11, 0.3);
         }
 
-        /* PDF Button only */
+        .tip-title {
+            color: #FCD34D;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
         .action-footer {
-            margin-top: 5rem;
+            margin-top: 6rem;
             text-align: center;
-            padding-bottom: 4rem;
+            padding-bottom: 6rem;
         }
 
         .btn-pdf {
             background: var(--gradient-brand);
             color: #fff;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
+            padding: 1.4rem 3.5rem;
+            border-radius: 100px;
             border: none;
             cursor: pointer;
             font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: 800;
+            font-size: 1.2rem;
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
-            box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3);
-            transition: all 0.3s ease;
+            gap: 1.2rem;
+            box-shadow: 0 15px 35px rgba(234, 88, 12, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .btn-pdf:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(234, 88, 12, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 20px 45px rgba(234, 88, 12, 0.6);
         }
 
         footer {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 1rem;
             text-align: center;
-            margin-top: 2rem;
-            opacity: 0.6;
+            margin-top: 3rem;
+            opacity: 0.7;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 4rem 0;
+            width: 100%;
         }
 
         /* Print Settings */
         @media print {
             * { color: #000 !important; background: transparent !important; box-shadow: none !important; }
             body { padding: 0.5cm; background: #fff !important; }
-            .guide-section { border: 1px solid #ddd !important; break-inside: avoid; padding: 1.5rem !important; margin-bottom: 1cm; }
-            .btn-pdf, .brand-header { display: none !important; }
-            h1 { font-size: 1.8rem !important; background: none !important; -webkit-text-fill-color: #000 !important; }
-            .instruction-box { border: 1px solid #ccc; border-left: 5px solid #000; }
+            .guide-section { border: 1.5px solid #000 !important; break-inside: avoid; padding: 1.5rem !important; margin-bottom: 1cm; border-radius: 0 !important; }
+            .btn-pdf, .brand-header, .divider { display: none !important; }
+            h1 { font-size: 2rem !important; margin-bottom: 0.5cm; background: none !important; -webkit-text-fill-color: #000 !important; font-weight: 900 !important; }
+            table { font-size: 10pt !important; border: 1px solid #000; }
+            th, td { border: 0.5px solid #000; }
         }
 
         @media (max-width: 640px) {
-            .guide-section { padding: 2rem 1.5rem; }
-            h1 { font-size: 2.2rem; }
+            .guide-section { padding: 2.5rem 1.5rem; }
+            h1 { font-size: 2.4rem; }
+            .brand-name { font-size: 1.1rem; }
+            th, td { padding: 0.5rem; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -233,102 +290,143 @@
     <div class="container">
         <div class="brand-header">
             <div class="brand-name">Mamãe no Comando</div>
+            <div style="width: 50px; height: 3px; background: var(--gradient-brand); margin: 0 auto; border-radius: 10px;"></div>
         </div>
 
         <header>
-            <h1>Guia Completo de Relaxamento</h1>
-            <p class="subtitle">Bônus exclusivo para alunas do Método Código do Sono Infantil. Utilize estas técnicas para acelerar o processo de adormecimento e melhorar a qualidade do repouso do seu bebê.</p>
+            <h1>Guia Mestre de Relaxamento</h1>
+            <p class="subtitle">O manual definitivo de bônus para alunas. Domine as técnicas que preparam o sistema nervoso do bebê para um sono ininterrupto e restaurador.</p>
         </header>
 
-        <div class="intro-card">
-            <p>"O relaxamento não é apenas a ausência de movimento, é um estado de segurança profunda onde o corpo se permite desligar."</p>
+        <!-- TABLE OF WINDOWS -->
+        <div class="table-card">
+            <h3><i class="fas fa-clock"></i> Janelas de Sono Sugeridas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Idade</th>
+                        <th>Janela de Acordado</th>
+                        <th>Sonecas Diárias</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0-2 meses</td>
+                        <td>45 - 60 min</td>
+                        <td>4 - 5</td>
+                    </tr>
+                    <tr>
+                        <td>3-4 meses</td>
+                        <td>1h15 - 1h45</td>
+                        <td>3 - 4</td>
+                    </tr>
+                    <tr>
+                        <td>5-6 meses</td>
+                        <td>2h - 2h30</td>
+                        <td>2 - 3</td>
+                    </tr>
+                    <tr>
+                        <td>7-9 meses</td>
+                        <td>2h45 - 3h15</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; font-style: italic;">* Estes valores são referências médias e devem ser adaptados ao ritmo único do seu bebê.</p>
         </div>
 
-        <!-- 1. O Ambiente -->
+        <!-- 1. O Ritual do Banho Morno -->
         <div class="guide-section">
             <div class="section-header">
-                <div class="icon-box"><i class="fas fa-home"></i></div>
-                <h2>1. O Ambiente do Sono Profundo</h2>
+                <div class="icon-box"><i class="fas fa-bath"></i></div>
+                <h2>1. Hidroterapia Relaxante</h2>
             </div>
-            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">Antes de qualquer técnica, o ambiente deve estar preparado para não enviar sinais contraditórios ao cérebro do bebê.</p>
+            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O banho não serve apenas para higiene; ele é o sinal biológico de que o "dia acabou". A queda na temperatura corporal após o banho morno induz naturalmente à sonolência.</p>
             
             <div class="instruction-box">
-                <div class="instruction-title"><i class="fas fa-adjust"></i> Checklist de Ouro</div>
+                <div class="instruction-title"><i class="fas fa-water"></i> Técnica da Imersão</div>
+                <p class="instruction-text">Mantenha a água entre 36.5°C e 37.5°C. Evite brinquedos estimulantes ou luzes fortes. Fale o mínimo possível e use movimentos lentos. O objetivo é reduzir os estímulos sensoriais gradualmente.</p>
+            </div>
+
+            <div class="tip-box">
+                <div class="tip-title"><i class="fas fa-magic"></i> O Truque da Melatonina</div>
+                <p class="instruction-text">Ao sair do banho, leve o bebê diretamente para um ambiente com luz baixíssima (preferencialmente âmbar). O contraste térmico e a penumbra dão o sinal verde para o cérebro liberar melatonina.</p>
+            </div>
+        </div>
+
+        <!-- 2. Ambiente Sagrado -->
+        <div class="guide-section">
+            <div class="section-header">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h2>2. O Santuário do Sono</h2>
+            </div>
+            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O quarto do bebê deve ser um local neutro emocionalmente. Nenhuma atividade agitada deve ocorrer onde ele dorme.</p>
+            
+            <div class="instruction-box">
+                <div class="instruction-title"><i class="fas fa-moon"></i> Higiene Ambiental</div>
                 <ul style="list-style: none; color: var(--text-main); font-size: 1rem;">
-                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> <strong>Blackout Total:</strong> A escuridão estimula a produção de melatonina.</li>
-                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> <strong>Temperatura:</strong> Mantenha entre 20°C e 22°C (o frescor ajuda no sono).</li>
-                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> <strong>Umidade:</strong> Use um umidificador se o ar estiver seco.</li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.7rem;"></i> <strong>Zero Eletrônicos:</strong> Mesmo as luzes de standby de babás eletrônicas podem atrapalhar. Cubra com fita isolante.</li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.7rem;"></i> <strong>Têxteis Naturais:</strong> Use lençóis de algodão 100%. Tecidos sintéticos podem superaquecer o bebê, causando micro-despertares.</li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--primary-gold); margin-right: 0.7rem;"></i> <strong>Saco de Dormir:</strong> Evite cobertas soltas. Sacos de dormir mantêm a temperatura estável e trazem sensação de contenção (swaddle).</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 2. Sinais de Sono -->
+        <!-- 3. Sinais de Alerta -->
         <div class="guide-section">
             <div class="section-header">
-                <div class="icon-box"><i class="fas fa-eye"></i></div>
-                <h2>2. Identificando a "Janela" Ideal</h2>
+                <div class="icon-box"><i class="fas fa-brain"></i></div>
+                <h2>3. Decifrando a Linguagem Corporal</h2>
             </div>
-            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">Colocar o bebê para dormir no momento certo evita o "efeito vulcão" (bebê exausto que não consegue relaxar).</p>
+            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O bebê "fala" que está com sono muito antes de chorar. Aprender a ler esses sinais é a diferença entre um adormecimento de 15 minutos ou uma batalha de 2 horas.</p>
             
             <div class="instruction-box">
-                <div class="instruction-title"><i class="fas fa-info-circle"></i> Sinais de Alerta</div>
-                <p class="instruction-text">Fique atenta a: Coçar os olhos, puxar as orelhas, olhar fixo no vazio, e o famoso bocejo. Se o bebê começar a chorar de irritação, a janela já passou e o relaxamento será mais difícil.</p>
+                <div class="instruction-title"><i class="fas fa-exclamation-triangle"></i> Sinais Precoces (Momento Ideal)</div>
+                <p class="instruction-text">Olhar parado, diminuição da atividade física, sobrancelhas levemente rosadas e desvios de olhar quando você tenta interagir.</p>
+            </div>
+
+            <div class="tip-box" style="border-left: 5px solid #EF4444; border-style: solid;">
+                <div class="tip-title" style="color: #EF4444;"><i class="fas fa-fire"></i> Sinais de Hiperestimulação (Já passou da hora)</div>
+                <p class="instruction-text">Choro agudo, arquear as costas, movimentos bruscos de braços e pernas. Se chegar aqui, foque 100% no Pele a Pele por 15 minutos antes de tentar deitar o bebê.</p>
             </div>
         </div>
 
-        <!-- 3. Toque Terapêutico -->
+        <!-- 4. Massagem e Conexão -->
         <div class="guide-section">
             <div class="section-header">
-                <div class="icon-box"><i class="fas fa-child"></i></div>
-                <h2>3. Toque e Massagem Relaxante</h2>
+                <div class="icon-box"><i class="fas fa-hands"></i></div>
+                <h2>4. O Toque da Segurança Profunda</h2>
             </div>
-            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O toque intencional libera ocitocina, que é o antídoto natural para o cortisol (hormônio do estresse).</p>
+            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">A massagem relaxante reduz a produção de adrenalina e estimula o sistema nervoso parassimpático (o modo "descanso e digestão").</p>
             
             <div class="instruction-box">
-                <div class="instruction-title"><i class="fas fa-play"></i> Técnica do Deslize</div>
-                <p class="instruction-text">Use movimentos longos e lentos. Comece pelos ombros e deslize até os pés. A velocidade deve ser de cerca de 3 a 5 cm por segundo - esta é a velocidade que mais ativa os receptores de prazer na pele.</p>
-            </div>
-
-            <div class="tip-box">
-                <div class="tip-title"><i class="fas fa-lightbulb"></i> Insight Pro</div>
-                <p class="instruction-text">No rosto, desenhe pequenos corações com as pontas dos dedos ao redor dos olhos e boca. Isso ajuda a relaxar os músculos faciais que tensionam durante o choro.</p>
+                <div class="instruction-title"><i class="fas fa-fingerprint"></i> Técnica da Pressão Suave</div>
+                <p class="instruction-text">Imagine que você está massageando uma uva sem querer estourá-la. Esse é o peso ideal. Comece pela testa, deslizando em direção às têmporas, depois desça para o peito e abdômen em movimentos horários firmes e lentos.</p>
             </div>
         </div>
 
-        <!-- 4. Melodias e Ruídos -->
+        <!-- 5. O Poder da Voz -->
         <div class="guide-section">
             <div class="section-header">
-                <div class="icon-box"><i class="fas fa-volume-up"></i></div>
-                <h2>4. O Som da Calmaria</h2>
+                <div class="icon-box"><i class="fas fa-comment-slash"></i></div>
+                <h2>5. Murmúrio e Ruído</h2>
             </div>
-            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O silêncio absoluto pode ser assustador para o bebê que está acostumado com o barulho constante do útero.</p>
+            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O som agudo da voz humana pode ser estimulante. O bebê precisa de frequências graves e constantes.</p>
             
             <div class="instruction-box">
-                <div class="instruction-title"><i class="fas fa-headphones"></i> White Noise</div>
-                <p class="instruction-text">Mantenha o ruído branco em um volume de chuva moderada. Ele cria uma "barreira acústica" que impede que latidos ou barulhos de carros despertem o bebê durante a transição dos ciclos de sono.</p>
+                <div class="instruction-title"><i class="fas fa-microphone"></i> O Som "Shhh"</div>
+                <p class="instruction-text">O som do "Shhh" feito de forma rítmica e prolongada imita perfeitamente o som das artérias no útero. Faça o som de forma contínua, ligeiramente mais alto que o choro do bebê, e vá diminuindo conforme ele se acalma.</p>
             </div>
         </div>
 
-        <!-- 5. Pele a Pele -->
-        <div class="guide-section">
-            <div class="section-header">
-                <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
-                <h2>5. Respiração Coordenada</h2>
-            </div>
-            <p style="margin-bottom: 1.5rem; color: #CBD5E1;">O seu estado emocional dita o estado do bebê. Ele sente a sua frequência cardíaca.</p>
-            
-            <div class="instruction-box">
-                <div class="instruction-title"><i class="fas fa-sync"></i> Sincronia Mágica</div>
-                <p class="instruction-text">Ao segurar o bebê, faça inspirações profundas e expirações longas e sonoras. O bebê começará a imitar o seu ritmo respiratório involuntariamente, levando ao relaxamento muscular imediato.</p>
-            </div>
-        </div>
+        <div class="divider"></div>
 
         <div class="action-footer">
             <button class="btn-pdf" onclick="window.print()">
                 <i class="fas fa-file-pdf"></i> Salvar Guia Completo em PDF
             </button>
             <footer>
-                &copy; 2024 Mamãe no Comando. Conteúdo exclusivo para alunas.
+                &copy; 2024 Mamãe no Comando. Conteúdo exclusivo para alunas do Método Código do Sono Infantil. O compartilhamento deste material é proibido.
             </footer>
         </div>
     </div>
